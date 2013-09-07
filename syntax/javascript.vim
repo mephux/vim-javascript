@@ -108,7 +108,7 @@ if g:javascript_conceal == 1
   syntax keyword jsNan            NaN conceal cchar=ℕ
 else
   syntax keyword jsNull           null
-  syntax keyword jsThis           this
+  syntax keyword jsThis           this self
   syntax keyword jsReturn         return
   syntax keyword jsUndefined      undefined
   syntax keyword jsNan            NaN
@@ -264,7 +264,7 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink jsParensErrC           Error
   HiLink jsOperator             Operator
   HiLink jsStorageClass         StorageClass
-  HiLink jsThis                 Special
+  HiLink jsThis                 Type
   HiLink jsNan                  Number
   HiLink jsNull                 Type
   HiLink jsUndefined            Type
@@ -279,7 +279,7 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink jsFuncBraces           Noise
   HiLink jsFuncParens           Noise
   HiLink jsSpecial              Special
-  HiLink jsGlobalObjects        Special
+  HiLink jsGlobalObjects        Type
   HiLink jsExceptions           Special
   HiLink jsFutureKeys           Special
   HiLink jsBuiltins             Special
