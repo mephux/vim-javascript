@@ -29,6 +29,10 @@ syntax sync fromstart
 
 syntax match   jsNoise           /\%(:\|,\|\;\|\.\)/
 
+syntax match jQuery          /\.\@<!\(\$\|jQuery\)\((\|.\)\@=/
+syntax match selfANDthat     /\(self\|that\)\(\.\|(\)\@=/
+
+
 "" Program Keywords
 syntax keyword jsStorageClass   const var let
 syntax keyword jsOperator       delete instanceof typeof void new in
@@ -301,6 +305,10 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink jsCssStyles            Label
   
   HiLink javaScriptStatics      jsStatics
+
+  HiLink jQuery                         Constant
+  HiLink javaScriptFunctionCall         Constant
+  HiLink selfANDthat                    Type
 
 
   delcommand HiLink
