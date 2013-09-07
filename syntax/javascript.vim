@@ -44,6 +44,8 @@ syntax region  jsLineComment    start=+^\s*\/\/+ skip=+\n\s*\/\/+ end=+$+ keepen
 syntax region  jsCvsTag         start="\$\cid:" end="\$" oneline contained
 syntax region  jsComment        start="/\*"  end="\*/" contains=jsCommentTodo,jsCvsTag,@Spell fold
 
+syntax keyword javaScriptStatics        Anchor Applet Area Array Boolean Button Checkbox Date document event FileUpload Form Frame Function Hidden History Image JavaArray JavaClass JavaObject JavaPackage java Layer Link Location Math MimeType Number navigator netscape Object Option Packages Password Plugin Radio RegExp Reset Select String Style Submit screen sun Text Textarea window XMLHttpRequest id getElement getElements body html options href indexOf hash forEach location
+
 "" JSDoc / JSDoc Toolkit
 if !exists("javascript_ignore_javaScriptdoc")
   syntax case ignore
@@ -297,6 +299,9 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink jsHtmlElemFuncs        PreProc
 
   HiLink jsCssStyles            Label
+  
+  HiLink javaScriptStatics      jsStatics
+
 
   delcommand HiLink
 endif
